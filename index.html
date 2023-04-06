@@ -1,0 +1,320 @@
+<!doctype html>
+<html class="export" lang="en">
+<head>
+
+  <title> Didi León</title>
+  <!-- Isotope does not require any CSS files -->
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/p5.min.js"></script>
+  <script src="js/matter.js"></script>
+  <script src="js/matter.min.js"></script>
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap'); 
+    
+    /* fluid 5 columns */
+    .grid-sizer,
+    .grid-item { 
+      width: 32.4%; 
+    }
+    /* 2 columns */
+    .grid-item--width2 { width: 40%; }
+    .grid-sizer .grid-element--content {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+    .grid-item--width2 .grid-element--content {
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+    } 
+  </style>
+  
+</head>
+<body class="page--index">
+  
+  <div class="hero">
+    <!-- header -->
+    <header class="main-header">
+      <div class="main-header--content">
+        <div class="col col-left">
+          <h1><a class="navigation__link" href="#1"> Didi León </a></h1>
+        </div>
+        <div class="col col-center">
+          <nav  class="main--nav" >
+            <ul>
+              <li><a class="navigation__link active" href="#1"> home </a></li>
+              <li><a class="navigation__link" href="#2"> bio </a></li>
+              <li><a class="navigation__link" href="#3"> contacto </a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+   
+    <!-- contenido -->
+    <!-- PORTFOLIO EVENTOS -->
+    <section class="container portfolio--content page-section" id="1">
+     
+      <section class="video-pleamar">
+        <img src="images/pleamar/pleamar1.png" alt="Pleamar 2021">
+      </section>
+      <section class="section--actividades" data-js="hero-demo">
+        <div class="ui-group">
+          <div class="filters button-group js-radio-button-group">
+            <button class="button is-checked" data-filter="*">todos</button>
+            <button class="button" data-filter=".talleres"> talleres </button>
+            <button class="button" data-filter=".seminarios">seminarios</button>
+            <button class="button" data-filter=".eventos">eventos</button>
+            <button class="button" data-filter=".charlas">charlas</button>
+          </div>
+          </div>
+          <div class="grid">
+              <div class="element-item grid-item grid-sizer seminarios " data-category="seminarios">
+                <div class="grid-element--content">
+                  <div class="section--text">
+                    <div class="header--card">
+                      <h5>2023 / AV Performance</h5>
+                      <h3>SONOKUAN</h3>  
+                    </div>
+                    <aside class="section-tags tag-seminarios">
+                      <span> MIRAR - Festival de Cine </span>
+                    </aside>
+                    <div class="overlay">
+                      <p> Apertura segunda edición Festival de Cine mirar en Mar del Sur.</p>
+                        
+                    </div>
+                    
+                  </div>
+               
+                  <div class="section--img">
+                    <img class="img--cat" src="./images/mirar/mirar1.JPG" alt="">
+                  </div>
+                  
+                </div>
+              </div>
+               <!-- TALLER: Margo -->
+              <div class="element-item grid-item grid-sizer  talleres" data-category="talleres">
+                <div class="grid-element--content">
+                  <div class="section--text">
+                    <div class="header--card">
+                      <h5>2022 - Conversatorio y performance audiovisual</h5>
+                      <h3>ALGORÍTMICAS | Museo MAR</h3>  
+                    </div>
+                    <div class="overlay">
+                      <p>¿Cuál es la importancia de acercar la programación a la práctica artística? 
+                        ¿Cómo se manifiesta la brecha entre quienes producen por medio del uso y la creación de algoritmos, y aquellos que no? ¿Por qué dentro de la industria del software solo el 13% son mujeres? </p>
+                    </div>
+                   
+                  </div>
+                  <aside class="section-tags tag-talleres">
+                    <span> Festival Pleamar </span>
+                  </aside>
+                  <div class="section--img">
+                    <img class="img--cat" src="./images/pleamar/pleamar.jpeg" alt="">
+                  </div>
+                </div>
+              </div>
+               <!-- EVENTO: poquet -->
+              <div class="element-item grid-item grid-sizer eventos" data-category="eventos">
+                <div class="grid-element--content">
+                  <div class="section--text">
+                    <div class="header--card"> 
+                      <h5> 2021 - Performace Audiovisual Museo Mar </h5>  
+                      <h3> BREATHE OUT OF THE SPHERE  </h3>  
+                    </div>
+                    <div class="overlay">
+                      <p>Performance at the Provincial Museum of Contemporary art MAR (Museo Provincial de arte Contemporáneo MAR) within the context of Pleamar Electronic Music and Sound Art Festival
+We participated in the inaugural exhibition with a sound-visual project .
+Pleamar is a proposal with a lot of info and love about the current experimental electronic scene 💙🌊 </p>
+                    
+                    </div>
+                  </div>
+                  <aside class="section-tags tag-eventos">
+                    <span> Festival Pleamar</span>
+                  </aside>
+                  <div class="section--img">
+                    <img class="img--cat pocket-col" src="./images/pocket.png" alt="">
+                  </div>
+                 
+                </div>
+                
+              </div>
+              
+  
+        </div>
+      </section>
+    </section> 
+    <!-- QUE ES -->
+    <section class="section--quienes-somos page-section" id="2">
+      <div class="section--ouli-speech"> 
+        
+        <div class="person-wrapper"> 
+          <h1>Bio</h1>
+          <img src="images/didi.jpeg" alt="Diana León"> 
+          <h3> Diana León </h3>
+
+        </div>
+        <p>
+          Diana K. León es Ingeniería de Sistemas, directora creativa de oulibloom y artista audiovisual.
+          Desarrolladora de software en varias compañías como Globant, Technisys, Band of Coders (Buenos Aires), 
+          Rolex (Paris), desarrollo mobile (android, iOS) en AppsWorld (Barcelona) y actualmente en CommonAreas (Online, USA). 
+          Utilizando processing, empieza a explorar el mundo de las visuales en tiempo real. 
+          Comienza con talleres de Processing: workshop en Free Art Bureau (Paris), Processing workshop en Studio NAND (Berlín). 
+          Realiza una residencia artística en Media arts and creative computing en SMU, dictado por Ira Greenberg, University of Edinburgh. Scotland. 2013. 
+          En el marco de la docencia, participa como docente en la UNICEN en la Facultad de Arte en dos materias: Programación creativa y Laboratorio de interactividad, 
+          en la diplomatura en narrativas transmedia y tecnologías de la interactividad, también en diferentes espacios talleres y workshops de manera independiente.
+          Actualmente se encuentra realizando la Maestría en Tecnología y Estética de las Artes Electrónicas de la UNTREF.
+        </p>
+      </div>
+      <div class="section--people"> 
+          
+      </div>
+    </section >
+   
+
+    <!--FOOTER -->
+    <footer class="page-section" id="3">
+      <section class="main-content-footer">
+        <div class="left-footer">
+            <h1>oulibloom</h1>
+        </div>
+        <div class="center-footer">
+          <span class="datos"> 
+            diana.ka.leon@gmail.com
+          </span>
+          <span class="datos">
+            Mar del Plata
+          </span>
+          <span class="datos">
+            Argentina 
+          </span>
+          
+         
+
+        </div>
+        <div class="right-footer">
+          <ul class="redes">
+            
+            <li><a class="link--instagram" href="https://www.instagram.com/didi.leon.cc" onclick="window.open(this.href, 'newwindow'); return false;" alt="oulibloom">INSTAGRAM</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </footer>  
+   
+  </div> 
+
+
+
+
+
+
+<script src="js/isotope-docs.min.js"></script>
+<script>
+  var $grid = $('.grid').isotope({
+  // main isotope options
+  layoutMode: 'packery',
+  itemSelector: '.grid-item',
+  percentPosition: true,
+  // options for masonry layout mode
+  masonry: {
+    columnWidth: '.grid-sizer',
+  }
+})
+$(document).ready(function() {
+		$('a').bind('click', function(e) {
+				e.preventDefault(); // prevent hard jump, the default behavior
+				var target = $(this).attr("href"); // Set the target as variable
+				// perform animated scrolling by getting top-position of target-element and set it as scroll target
+				$('html, body').stop().animate({
+						scrollTop: $(target).offset().top
+				}, 600, function() {
+						location.hash = target; //attach the hash (#jumptarget) to the pageurl
+				});
+
+				return false;
+		});
+    
+});
+
+$(window).scroll(function() {
+		var scrollDistance = $(window).scrollTop();
+		$('.page-section').each(function(i) {
+				if ($(this).position().top <= scrollDistance) {
+						$('.navigation a.active').removeClass('active');
+						$('.navigation a').eq(i).addClass('active');
+				}
+		});
+}).scroll();
+
+
+/* QUIENES SOMOS */
+
+$(document).ready(function() {
+  //MARIO
+	$('img.plus_0').click(function() {
+		$('.modal-wrapper_0').addClass('open')
+	});
+	$('.btn-close').click(function() {
+		$('.modal-wrapper_0').removeClass('open')
+	});
+  //DIANA
+  $('img.plus_1').click(function() {
+		$('.modal-wrapper_1').addClass('open')
+	});
+	$('.btn-close').click(function() {
+		$('.modal-wrapper_1').removeClass('open')
+	});
+  //FER
+  $('img.plus_2').click(function() {
+    $('.modal-wrapper_2').addClass('open')
+  });
+  $('.btn-close').click(function() {
+    $('.modal-wrapper_2').removeClass('open')
+  });
+  //LU
+  $('img.plus_3').click(function() {
+    $('.modal-wrapper_3').addClass('open')
+  });
+  $('.btn-close').click(function() {
+    $('.modal-wrapper_3').removeClass('open')
+  });
+
+});
+
+$('.main-header nav ul li a').click(function(e){
+    e.preventDefault(); //Remove this in your main code
+    $('.main-header nav ul li a').removeClass("active");
+    $(this).addClass("active");
+});
+
+ 
+</script>
+
+ 
+
+</body>
+</html>
+
+<!-- <ul class="wrapper-redes">
+  <li> IG </li>
+  <li> FB </li>
+  <li> TW </li>
+</ul> -->

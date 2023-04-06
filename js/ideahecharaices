@@ -1,0 +1,92 @@
+const string = "una idea hecha raices"; 
+const size = 80; 
+const fontFile = "Muli-Black.ttf";
+const showText = false;
+
+//color sets
+const textAlpha = 10; 
+const backgroundColor = 255;
+const strokeAlpha = 60; 
+const strokeColor = 0; 
+
+const lineSpeed = 0.1;
+const fontSampleFactor = 0.9; //cuantos puntos salen de los bordes de las letras
+
+const noiseZoom = 0.011;
+const noiseOctaves = 2.5; //Octava del noise
+const noiseFalloff = 1.2; //longitua de los hilos
+
+const zOffsetChange = 0;
+const individualZOffset = 	1; 
+
+
+const newPointsCount = 9; //the number of new points added when the mouse is dragged
+
+
+var font;
+var points = [];
+var startingPoints;
+
+function preload() {
+	font = loadFont("./assets/Muli-Black.ttf");
+
+}
+var canvas;
+
+/* This is when the windows resized */
+function windowResized() {
+	resizeCanvas(windowWidth*0.7,300);
+}
+function setup() {
+	frameRate(60);
+	/* This is for the canvas */
+	canvas = createCanvas(windowWidth*0.7,300);
+	canvas.position(windowWidth*0.1,0);
+	canvas.style('z-index','-1');
+	background(backgroundColor);
+	textFont(font);
+	textSize(80);
+	fill(backgroundColor, textAlpha);
+	stroke(strokeColor, strokeAlpha);
+	noiseDetail(noiseOctaves, noiseFalloff);
+
+	startingPoints = font.textToPoints(string, width / 2 - textWidth(string) / 2 ,200, size, {"sampleFactor": fontSampleFactor});
+
+	for (let p = 0; p < startingPoints.length; p++) {
+		points[p] = startingPoints[p];
+		points[p].zOffset = random();
+	}
+}
+
+function draw() {
+	if(showText){
+		noStroke();
+		text(string, width / 2 - textWidth(string) / 2, height);
+		stroke(strokeColor, strokeAlpha);
+	}
+	for (let pt = 0; pt < points.length; pt++) {
+		let p = points[pt];
+		let noiseX = p.x * noiseZoom;
+		let noiseY = p.y * noiseZoom;
+		let noiseZ = frameCount * zOffsetChange + p.zOffset*individualZOffset;
+		let newPX = p.x + map(noise(noiseX, noiseY, noiseZ), 0, 1, -lineSpeed-0.4, lineSpeed);
+		let newPY = p.y + map(noise(noiseX, noiseY, noiseZ + 214), 0, 1, -lineSpeed, lineSpeed);
+		//stroke(random(14));
+		line(p.x, p.y, newPX, newPY);
+		p.x = newPX;
+		p.y = newPY;
+	}
+}
+function mouseClicked() {
+	background(255);
+	startingPoints = font.textToPoints(string, width / 2 - textWidth(string) / 2, 200, size, {"sampleFactor": fontSampleFactor});
+
+	for (let p = 0; p < startingPoints.length; p++) {
+		points[p] = startingPoints[p];
+		points[p].zOffset = random();
+	}
+}
+var boxs=[]
+var hits=[]
+	
+	
